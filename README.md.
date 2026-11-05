@@ -1,0 +1,67 @@
+# ✈️ AeroRAG — Aviation Knowledge Retrieval System
+
+## Overview
+
+AeroRAG is a Retrieval-Augmented Generation (RAG) application designed to answer aviation-related questions using information extracted from PowerPoint presentations.
+
+It combines document processing, semantic search, vector storage, and Large Language Models to generate answers grounded in source material.
+
+## Architecture
+
+1. **Document ingestion:** Extracts text from aviation PowerPoint slides.
+2. **Text splitting:** Splits content into smaller overlapping chunks.
+3. **Embeddings:** Converts text into vector representations using Google Gemini embeddings.
+4. **Vector database:** Stores and searches embeddings using ChromaDB.
+5. **Retrieval:** Finds the most relevant presentation excerpts.
+6. **Generation:** Uses Google Gemini to generate answers based on retrieved context.
+7. **Interface:** Provides an interactive Streamlit application.
+
+## Technology Stack
+
+- Python
+- LangChain
+- Google Gemini API
+- ChromaDB
+- Streamlit
+- python-pptx
+
+## Features
+
+- PowerPoint document processing
+- Semantic document retrieval
+- Context-grounded AI answers
+- Slide references
+- API error handling and retry logic
+- Logging and monitoring
+- Aviation-themed user interface
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd YOUR_REPOSITORY_NAME
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Configure your Google API key using Streamlit Secrets.
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
+
+## Security
+
+API keys and credentials must never be committed to the repository.
+
+## Project Purpose
+
+This project demonstrates the practical implementation of Retrieval-Augmented Generation using LangChain, vector databases, and Large Language Models.
