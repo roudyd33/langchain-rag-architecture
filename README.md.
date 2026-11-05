@@ -1,67 +1,27 @@
-# ✈️ AeroRAG — Aviation Knowledge Retrieval System
+# LangChain RAG Architecture
 
-## Overview
+An AI-powered Retrieval-Augmented Generation (RAG) application built using LangChain, ChromaDB, Google Gemini, and Streamlit.
 
-AeroRAG is a Retrieval-Augmented Generation (RAG) application designed to answer aviation-related questions using information extracted from PowerPoint presentations.
+## Features
+- Upload and process PowerPoint presentations.
+- Extract and split document content into chunks.
+- Generate embeddings using Google Gemini.
+- Store and retrieve information using ChromaDB.
+- Answer questions using an LLM with relevant retrieved context.
+- Display AI-generated answers through a Streamlit interface.
 
-It combines document processing, semantic search, vector storage, and Large Language Models to generate answers grounded in source material.
-
-## Architecture
-
-1. **Document ingestion:** Extracts text from aviation PowerPoint slides.
-2. **Text splitting:** Splits content into smaller overlapping chunks.
-3. **Embeddings:** Converts text into vector representations using Google Gemini embeddings.
-4. **Vector database:** Stores and searches embeddings using ChromaDB.
-5. **Retrieval:** Finds the most relevant presentation excerpts.
-6. **Generation:** Uses Google Gemini to generate answers based on retrieved context.
-7. **Interface:** Provides an interactive Streamlit application.
-
-## Technology Stack
-
+## Technologies
 - Python
 - LangChain
-- Google Gemini API
 - ChromaDB
+- Google Gemini
 - Streamlit
 - python-pptx
 
-## Features
-
-- PowerPoint document processing
-- Semantic document retrieval
-- Context-grounded AI answers
-- Slide references
-- API error handling and retry logic
-- Logging and monitoring
-- Aviation-themed user interface
-
 ## Installation
 
-Clone the repository:
-
 ```bash
-git clone https://github.com/roudyd33/langchain-rag-architecture
+git clone https://github.com/roudyd33/langchain-rag-architecture.git
 cd langchain-rag-architecture
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
-```
-
-Configure your Google API key using Streamlit Secrets.
-
-Run the application:
-
-```bash
 streamlit run app.py
-```
-
-## Security
-
-API keys and credentials must never be committed to the repository.
-
-## Project Purpose
-
-This project demonstrates the practical implementation of Retrieval-Augmented Generation using LangChain, vector databases, and Large Language Models.
