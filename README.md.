@@ -1,27 +1,70 @@
-# LangChain RAG Architecture
+# AeroRAG — Aviation Knowledge Assistant
 
-An AI-powered Retrieval-Augmented Generation (RAG) application built using LangChain, ChromaDB, Google Gemini, and Streamlit.
+An AI-powered Retrieval-Augmented Generation (RAG) application built with Python, LangChain, ChromaDB, and Ollama.
 
-## Features
-- Upload and process PowerPoint presentations.
-- Extract and split document content into chunks.
-- Generate embeddings using Google Gemini.
-- Store and retrieve information using ChromaDB.
-- Answer questions using an LLM with relevant retrieved context.
-- Display AI-generated answers through a Streamlit interface.
+## Project Overview
+
+AeroRAG allows users to ask questions about aviation and receive answers grounded in information extracted from PowerPoint presentations.
+
+## Architecture
+
+1. **Document ingestion:** Extract text from PowerPoint presentations using Python-PPTX.
+2. **Text splitting:** Split extracted content into chunks using LangChain.
+3. **Embeddings:** Generate vector embeddings using Ollama's nomic-embed-text model.
+4. **Vector storage:** Store and manage embeddings using ChromaDB.
+5. **Retrieval:** Retrieve the four most relevant chunks using similarity search.
+6. **Generation:** Generate context-based answers using Ollama's qwen2.5:3b model.
+7. **Interface:** Provide an interactive interface using Streamlit.
 
 ## Technologies
+
 - Python
+- Streamlit
 - LangChain
 - ChromaDB
-- Google Gemini
-- Streamlit
+- Ollama
+- nomic-embed-text
+- qwen2.5:3b
 - python-pptx
+
+## Project Structure
+
+    langchain-rag-architecture/
+    ├── app.py
+    ├── rag.py
+    ├── requirements.txt
+    ├── README.md
+    ├── .gitignore
+    └── documents/
+        └── AAFC-POF-23-AerodynamicLimitationsv3.1.pptx
 
 ## Installation
 
-```bash
-git clone https://github.com/roudyd33/langchain-rag-architecture.git
-cd langchain-rag-architecture
-pip install -r requirements.txt
-streamlit run app.py
+Clone the repository:
+
+    git clone https://github.com/roudyd33/langchain-rag-architecture.git
+    cd langchain-rag-architecture
+
+Install dependencies:
+
+    pip install -r requirements.txt
+
+Install and start Ollama:
+https://ollama.com/
+
+Download the required models:
+
+    ollama pull nomic-embed-text
+    ollama pull qwen2.5:3b
+
+Run the application:
+
+    streamlit run app.py
+
+## Requirements
+
+Ollama must be installed and running locally with both required models available.
+
+## Author
+
+Roudy Douaihy
